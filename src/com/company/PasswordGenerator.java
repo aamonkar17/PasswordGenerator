@@ -7,7 +7,7 @@ public class PasswordGenerator {
     private String prefix;
     private int count;
     private int suffix;
-    private static int passcount;
+    private static int passcount = 0;
     public PasswordGenerator(int c) {
         count = c;
         prefix = "A";
@@ -19,7 +19,7 @@ public class PasswordGenerator {
     public static int pwCount(){
         return passcount;
     }
-    public String pwgen(){
+    public String pwGen(){
         for (int i = 0; i < this.count; i++){
             suffix=(int)(Math.random()*10*Math.pow(10,i));
         }
